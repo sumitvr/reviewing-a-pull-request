@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: img11 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: img11 
+    spec:
+      containers:
+        - name: img11 
+          image: containerregsitrydocker.azurecr.io/img11
+          ports:
+          - containerPort: 3000
